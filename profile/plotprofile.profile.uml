@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_-izs4AHJEeS7NbtxzfDUDg" name="PlotProfile" metaclassReference="_DEXMgAHKEeS7NbtxzfDUDg">
+  <eAnnotations xmi:id="_MjTzMQHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_MjTzMgHKEeS7NbtxzfDUDg" name="profile" nsURI="http:///schemas/profile/_MjTzMAHKEeS7NbtxzfDUDg/0" nsPrefix="profile">
+      <eAnnotations xmi:id="_MjTzPwHKEeS7NbtxzfDUDg" source="PapyrusVersion">
+        <details xmi:id="_MjTzQAHKEeS7NbtxzfDUDg" key="Version" value="1.0.0"/>
+        <details xmi:id="_MjTzQQHKEeS7NbtxzfDUDg" key="Comment" value=""/>
+        <details xmi:id="_MjTzQgHKEeS7NbtxzfDUDg" key="Copyright" value=""/>
+        <details xmi:id="_MjTzQwHKEeS7NbtxzfDUDg" key="Date" value="2014-07-02"/>
+        <details xmi:id="_MjTzRAHKEeS7NbtxzfDUDg" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_MjTzMwHKEeS7NbtxzfDUDg" name="watchSlot">
+        <eAnnotations xmi:id="_MjTzNAHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_MjTzNQHKEeS7NbtxzfDUDg" name="base_Slot" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_MjTzNwHKEeS7NbtxzfDUDg" name="readCSVFile">
+        <eAnnotations xmi:id="_MjTzOAHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_MjTzOQHKEeS7NbtxzfDUDg" name="base_Slot" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_MjTzOwHKEeS7NbtxzfDUDg" name="csvSeparator" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:id="_DEXMgAHKEeS7NbtxzfDUDg" alias="Slot">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Slot"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="__nEmQAHJEeS7NbtxzfDUDg" name="watchSlot">
+    <ownedAttribute xmi:id="_ES8fgAHKEeS7NbtxzfDUDg" name="base_Slot" association="_ES8fgQHKEeS7NbtxzfDUDg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Slot"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_AKn_QAHKEeS7NbtxzfDUDg" name="readCSVFile">
+    <ownedAttribute xmi:id="_D0RmgAHKEeS7NbtxzfDUDg" name="base_Slot" association="_D0RmgQHKEeS7NbtxzfDUDg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Slot"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_E3U-8AHKEeS7NbtxzfDUDg" name="csvSeparator" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gcfl8AHKEeS7NbtxzfDUDg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gcfl8QHKEeS7NbtxzfDUDg" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_Gcfl8gHKEeS7NbtxzfDUDg">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_D0RmgQHKEeS7NbtxzfDUDg" name="E_readCSVFile_Slot1" memberEnd="_D0RmggHKEeS7NbtxzfDUDg _D0RmgAHKEeS7NbtxzfDUDg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_D0RmggHKEeS7NbtxzfDUDg" name="extension_readCSVFile" type="_AKn_QAHKEeS7NbtxzfDUDg" aggregation="composite" association="_D0RmgQHKEeS7NbtxzfDUDg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ES8fgQHKEeS7NbtxzfDUDg" name="E_watchSlot_Slot1" memberEnd="_ES8fggHKEeS7NbtxzfDUDg _ES8fgAHKEeS7NbtxzfDUDg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ES8fggHKEeS7NbtxzfDUDg" name="extension_watchSlot" type="__nEmQAHJEeS7NbtxzfDUDg" aggregation="composite" association="_ES8fgQHKEeS7NbtxzfDUDg"/>
+  </packagedElement>
+</uml:Profile>
