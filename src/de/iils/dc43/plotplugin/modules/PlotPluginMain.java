@@ -37,8 +37,7 @@ public class PlotPluginMain {
 
 	public static void run(URI umlFileURI) {
 		String projectName = findProjectNameForModelURI(umlFileURI);
-		MessageConsoleStream consoleStream = SharedConsoleUtil
-				.getMessageStream(CONSOLENAME);
+		MessageConsoleStream consoleStream = SharedConsoleUtil.getMessageStream(CONSOLENAME);
 
 		// get the Workspace Path from Project-Preferences
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
@@ -46,27 +45,21 @@ public class PlotPluginMain {
 		TransactionalEditingDomain domain = SharedEditingDomainUtil
 				.getSharedEditingDomain("de.iils.dc43.diagram.main.editingDomain");
 		if (!umlFileURI.isPlatformResource()) {
-			umlFileURI = URI
-					.createPlatformResourceURI(
-							umlFileURI.segment(umlFileURI.segmentCount() - 2)
-									+ "/"
-									+ umlFileURI.segment(umlFileURI
-											.segmentCount() - 1), true);
+			umlFileURI = URI.createPlatformResourceURI(
+					umlFileURI.segment(umlFileURI.segmentCount() - 2) + "/"
+							+ umlFileURI.segment(umlFileURI.segmentCount() - 1), true);
 		}
 		// load Model resource
-		Resource umlModelResource = domain.getResourceSet().getResource(
-				umlFileURI, true);
+		Resource umlModelResource = domain.getResourceSet().getResource(umlFileURI, true);
 		// umlModelResource.unload();
 		// umlModelResource = RESOURCE_SET.getResource(umlfileURI, true);
 
 		// Open Model
 
-		Model umlModel = (Model) EcoreUtil
-				.getObjectByType(umlModelResource.getContents(),
-						UMLPackage.eINSTANCE.getModel());
+		Model umlModel = (Model) EcoreUtil.getObjectByType(umlModelResource.getContents(),
+				UMLPackage.eINSTANCE.getModel());
 
 		// Transform UML into the Java Model
-		System.out.println("herrrrrr");
 		PlotPluginUtility.readSlotValue(umlModel);
 		PlotPluginUtility.readSlotCSV(umlModel);
 
