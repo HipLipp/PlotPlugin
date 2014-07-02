@@ -42,17 +42,17 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	@Override
 	public void start(BundleContext context) throws Exception {
-		System.err.println("try to start");
+		// System.err.println("try to start");
 		if (!alreadyStarted) {
 			alreadyStarted = true;
-			System.err.println("started: " + Thread.currentThread().getId());
+			// System.err.println("started: " + Thread.currentThread().getId());
 			super.start(context);
 			plugin = this;
 			logManager = LoggingPlugin.createLogManager(this, true);
 		} else {
-			System.err.println("already started");
+			// System.err.println("already started");
 		}
-		System.err.println("end: " + Thread.currentThread().getId());
+		// System.err.println("end: " + Thread.currentThread().getId());
 	}
 
 	/*
@@ -72,7 +72,7 @@ public class Activator extends AbstractUIPlugin {
 		plugin = null;
 		super.stop(context);
 
-		System.err.println("stopped: " + Thread.currentThread().getId());
+		// System.err.println("stopped: " + Thread.currentThread().getId());
 		alreadyStarted = false;
 	}
 
@@ -87,8 +87,7 @@ public class Activator extends AbstractUIPlugin {
 
 	private static void configureFallbackLogger() {
 		Logger pluginLogger = Logger.getLogger(PLUGIN_ID);
-		pluginLogger.addAppender(new ConsoleAppender(new PatternLayout(
-				"%-5p [%C{1}:%L]: %m%n")));
+		pluginLogger.addAppender(new ConsoleAppender(new PatternLayout("%-5p [%C{1}:%L]: %m%n")));
 		fallbackLoggerConfigured = true;
 	}
 
@@ -101,8 +100,7 @@ public class Activator extends AbstractUIPlugin {
 				configureFallbackLogger();
 			}
 			Logger logger = Logger.getLogger(c);
-			logger.addAppender(new ConsoleAppender(new PatternLayout(
-					"%-5p [%C{1}:%L]: %m%n")));
+			logger.addAppender(new ConsoleAppender(new PatternLayout("%-5p [%C{1}:%L]: %m%n")));
 			return logger;
 		}
 		return getDefault().logManager.getLogger(c.getName());
