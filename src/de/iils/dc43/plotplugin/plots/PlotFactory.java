@@ -54,7 +54,7 @@ public class PlotFactory {
 		}
 
 		if (xValues == null) {
-			logger.info("Could not update plot, missing valid X-Variable name.");
+			// logger.info("Could not update plot, missing valid X-Variable name.");
 			return;
 		}
 		plot2DPanel.setAxisLabel(0, xVarName); // X-Label
