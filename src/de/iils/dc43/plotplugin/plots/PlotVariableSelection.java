@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class MenuCollection {
+public class PlotVariableSelection {
 
 	private Map<String, Boolean[]> store;// = new HashMap();
 
@@ -14,7 +14,7 @@ public class MenuCollection {
 	 * 
 	 * @param itemNames
 	 */
-	public MenuCollection(ArrayList<String> itemNames) {
+	public PlotVariableSelection(ArrayList<String> itemNames) {
 
 		this.store = new HashMap<String, Boolean[]>();
 

@@ -41,8 +41,7 @@ public class PlotDatabase {
 	 * @param values
 	 * @return
 	 */
-	public boolean addDatasetToDatabase(String datasetName,
-			ArrayList<Double> values) {
+	public boolean addDatasetToDatabase(String datasetName, ArrayList<Double> values) {
 
 		if (plotDatasets.containsKey(datasetName)) {
 			return false;
@@ -61,8 +60,8 @@ public class PlotDatabase {
 	 * @param values
 	 * @param overwriteOldData
 	 */
-	public void addDatasetToDatabase(String datasetName,
-			ArrayList<Double> values, boolean overwriteOldData) {
+	public void addDatasetToDatabase(String datasetName, ArrayList<Double> values,
+			boolean overwriteOldData) {
 
 		if (plotDatasets.containsKey(datasetName) && overwriteOldData) {
 			plotDatasets.put(datasetName, values);
@@ -113,8 +112,7 @@ public class PlotDatabase {
 	 * @param filepath
 	 * @param seperator
 	 */
-	private void readCSVFileIntoDatabase(String filepath, String seperator,
-			boolean overWriteOldData) {
+	private void readCSVFileIntoDatabase(String filepath, String seperator, boolean overWriteOldData) {
 		try {
 			CSVFileReader fileReader = new CSVFileReader();
 			fileReader.readFile(filepath, seperator, overWriteOldData);
@@ -130,8 +128,7 @@ public class PlotDatabase {
 	 * @param filepaths
 	 * @param seperators
 	 */
-	public void updateDataFromFile(List<String> filepaths,
-			List<String> seperators) {
+	public void updateDataFromFile(List<String> filepaths, List<String> seperators) {
 
 		if (filepaths.size() != seperators.size())
 			return;
@@ -156,12 +153,10 @@ public class PlotDatabase {
 	 * @param variableName
 	 * @param value
 	 */
-	public void addSlotValueToDB(String variableName, double value,
-			boolean eraseOldData) {
+	public void addSlotValueToDB(String variableName, double value, boolean eraseOldData) {
 
 		ArrayList<Double> dataset = null;
-		if (!plotDatabase.plotDatasets.containsKey(variableName)
-				|| eraseOldData) {
+		if (!plotDatabase.plotDatasets.containsKey(variableName) || eraseOldData) {
 			dataset = new ArrayList<Double>();
 			plotDatabase.plotDatasets.put(variableName, dataset);
 		} else {
@@ -176,6 +171,13 @@ public class PlotDatabase {
 	 */
 	public void resetDB() {
 		plotDatabase.plotDatasets.clear();
+	}
+
+	/**
+	 * @return the plotDatasets
+	 */
+	public Map<String, ArrayList<Double>> getPlotDatasets() {
+		return plotDatasets;
 	}
 
 }
