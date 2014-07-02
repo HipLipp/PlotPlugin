@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:l2="http://www.eclipse.org/uml2/4.0.0/UML/Profile/L2" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_-i6akAHJEeS7NbtxzfDUDg" type="PapyrusUMLProfileDiagram" name="PlotProfile" measurementUnit="Pixel">
   <children xmi:type="notation:Shape" xmi:id="__nEmQQHJEeS7NbtxzfDUDg" type="1026" fontName="Segoe UI" lineColor="0">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__nEmQwHJEeS7NbtxzfDUDg" source="ShadowFigure">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__nEmRAHJEeS7NbtxzfDUDg" key="ShadowFigure_Value" value="false"/>
-    </eAnnotations>
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__nEmRQHJEeS7NbtxzfDUDg" source="displayNameLabelIcon">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__nEmRgHJEeS7NbtxzfDUDg" key="displayNameLabelIcon_value" value="false"/>
-    </eAnnotations>
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__nEmRwHJEeS7NbtxzfDUDg" source="QualifiedName">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__nEmSAHJEeS7NbtxzfDUDg" key="QualifiedNameDepth" value="1000"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q7YagAHuEeSdr_vplOQQFw" source="ShadowFigure">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q7YagQHuEeSdr_vplOQQFw" key="ShadowFigure_Value" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rAXoMAHuEeSdr_vplOQQFw" source="displayNameLabelIcon">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rAXoMQHuEeSdr_vplOQQFw" key="displayNameLabelIcon_value" value="false"/>
     </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="__nEmSQHJEeS7NbtxzfDUDg" type="1034"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="__nEmSgHJEeS7NbtxzfDUDg" type="1071">
