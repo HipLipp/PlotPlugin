@@ -21,7 +21,7 @@ public class PlotPluginHandler extends AbstractHandler {
 		if (!SystemCheck.getInstance().getActivationStatus(Feature.NONE, true))
 			return null;
 		ExportDownHandler.registerCommandWithIcon(event.getCommand(),
-				de.iils.dc43.plotplugin.Activator.PLUGIN_ID, "sample.gif");
+				de.iils.dc43.plotplugin.Activator.PLUGIN_ID, "iconplot.png");
 		ISelection selection = HandlerUtil.getCurrentSelectionChecked(event);
 		IStructuredSelection sel = (IStructuredSelection) selection;
 		IResource coreresource = (IResource) sel.getFirstElement();

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Profile xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_-izs4AHJEeS7NbtxzfDUDg" name="PlotProfile" metaclassReference="_DEXMgAHKEeS7NbtxzfDUDg">
-  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MjTzMQHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+  <eAnnotations xmi:id="_MjTzMQHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML">
     <contents xmi:type="ecore:EPackage" xmi:id="_Fjbv0QHyEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_Fjbv0AHyEeSdr_vplOQQFw/9" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FjcW4gHyEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FjcW4wHyEeSdr_vplOQQFw" key="Version" value="1.0.9"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FjcW5AHyEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FjcW5QHyEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FjcW5gHyEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FjcW5wHyEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_FjcW4gHyEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_FjcW4wHyEeSdr_vplOQQFw" key="Version" value="1.0.9"/>
+        <details xmi:id="_FjcW5AHyEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_FjcW5QHyEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_FjcW5gHyEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_FjcW5wHyEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_Fjbv0gHyEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Fjbv0wHyEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_Fjbv0wHyEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Fjbv1AHyEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_Fjbv1gHyEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Fjbv1wHyEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_Fjbv1wHyEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Fjbv2AHyEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -26,21 +26,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_4V9o8QHxEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_4V9o8AHxEeSdr_vplOQQFw/8" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4V-3EAHxEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4V-3EQHxEeSdr_vplOQQFw" key="Version" value="1.0.8"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4V-3EgHxEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4V-3EwHxEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4V-3FAHxEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4V-3FQHxEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_4V-3EAHxEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_4V-3EQHxEeSdr_vplOQQFw" key="Version" value="1.0.8"/>
+        <details xmi:id="_4V-3EgHxEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_4V-3EwHxEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_4V-3FAHxEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_4V-3FQHxEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_4V9o8gHxEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4V9o8wHxEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_4V9o8wHxEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_4V9o9AHxEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_4V9o9gHxEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4V9o9wHxEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_4V9o9wHxEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_4V9o-AHxEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -50,21 +50,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_YMtqAAHwEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_YMtC8AHwEeSdr_vplOQQFw/7" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YMuREQHwEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YMuREgHwEeSdr_vplOQQFw" key="Version" value="1.0.7"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YMuREwHwEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YMuRFAHwEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YMuRFQHwEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YMuRFgHwEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_YMuREQHwEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_YMuREgHwEeSdr_vplOQQFw" key="Version" value="1.0.7"/>
+        <details xmi:id="_YMuREwHwEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_YMuRFAHwEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_YMuRFQHwEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_YMuRFgHwEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_YMtqAQHwEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YMtqAgHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_YMtqAgHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_YMtqAwHwEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_YMtqBQHwEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YMtqBgHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_YMtqBgHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_YMtqBwHwEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -74,21 +74,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_CpEiYQHwEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_CpEiYAHwEeSdr_vplOQQFw/6" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CpFJcgHwEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CpFJcwHwEeSdr_vplOQQFw" key="Version" value="1.0.6"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CpFJdAHwEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CpFJdQHwEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CpFJdgHwEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CpFJdwHwEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_CpFJcgHwEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_CpFJcwHwEeSdr_vplOQQFw" key="Version" value="1.0.6"/>
+        <details xmi:id="_CpFJdAHwEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_CpFJdQHwEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_CpFJdgHwEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_CpFJdwHwEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_CpEiYgHwEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CpEiYwHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_CpEiYwHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_CpEiZAHwEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_CpEiZgHwEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CpEiZwHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_CpEiZwHwEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_CpEiaAHwEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -98,21 +98,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_nF7WcQHvEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_nF7WcAHvEeSdr_vplOQQFw/5" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nF79ggHvEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nF79gwHvEeSdr_vplOQQFw" key="Version" value="1.0.5"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nF79hAHvEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nF79hQHvEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nF79hgHvEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nF79hwHvEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_nF79ggHvEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_nF79gwHvEeSdr_vplOQQFw" key="Version" value="1.0.5"/>
+        <details xmi:id="_nF79hAHvEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_nF79hQHvEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_nF79hgHvEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_nF79hwHvEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_nF7WcgHvEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nF7WcwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_nF7WcwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_nF7WdAHvEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_nF7WdgHvEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nF7WdwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_nF7WdwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_nF7WeAHvEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -122,21 +122,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_HHOlMQHvEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_HHOlMAHvEeSdr_vplOQQFw/4" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HHPMQgHvEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HHPMQwHvEeSdr_vplOQQFw" key="Version" value="1.0.4"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HHPMRAHvEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HHPMRQHvEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HHPMRgHvEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HHPMRwHvEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_HHPMQgHvEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_HHPMQwHvEeSdr_vplOQQFw" key="Version" value="1.0.4"/>
+        <details xmi:id="_HHPMRAHvEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_HHPMRQHvEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_HHPMRgHvEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_HHPMRwHvEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_HHOlMgHvEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HHOlMwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_HHOlMwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_HHOlNAHvEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_HHOlNgHvEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HHOlNwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_HHOlNwHvEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_HHOlOAHvEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -146,21 +146,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_SxDkgQHuEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_SxDkgAHuEeSdr_vplOQQFw/3" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SxELkgHuEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SxELkwHuEeSdr_vplOQQFw" key="Version" value="1.0.3"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SxELlAHuEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SxELlQHuEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SxELlgHuEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SxELlwHuEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_SxELkgHuEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_SxELkwHuEeSdr_vplOQQFw" key="Version" value="1.0.3"/>
+        <details xmi:id="_SxELlAHuEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_SxELlQHuEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_SxELlgHuEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_SxELlwHuEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_SxDkggHuEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SxDkgwHuEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_SxDkgwHuEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_SxDkhAHuEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_SxDkhgHuEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SxDkhwHuEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_SxDkhwHuEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_SxDkiAHuEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -170,21 +170,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_tf5bIAHtEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_tf40EAHtEeSdr_vplOQQFw/2" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tf6CMAHtEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tf6CMQHtEeSdr_vplOQQFw" key="Version" value="1.0.2"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tf6CMgHtEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tf6CMwHtEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tf6CNAHtEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tf6CNQHtEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_tf6CMAHtEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_tf6CMQHtEeSdr_vplOQQFw" key="Version" value="1.0.2"/>
+        <details xmi:id="_tf6CMgHtEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_tf6CMwHtEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_tf6CNAHtEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_tf6CNQHtEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_tf5bIQHtEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tf5bIgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_tf5bIgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_tf5bIwHtEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_tf5bJQHtEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tf5bJgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_tf5bJgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_tf5bJwHtEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -194,21 +194,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_aOn-wAHtEeSdr_vplOQQFw" name="PlotProfile" nsURI="http:///schemas/PlotProfile/_aOkUYAHtEeSdr_vplOQQFw/1" nsPrefix="PlotProfile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aOqbAgHtEeSdr_vplOQQFw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aOqbAwHtEeSdr_vplOQQFw" key="Version" value="1.0.1"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aOqbBAHtEeSdr_vplOQQFw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aOqbBQHtEeSdr_vplOQQFw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aOqbBgHtEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aOqbBwHtEeSdr_vplOQQFw" key="Author" value=""/>
+      <eAnnotations xmi:id="_aOqbAgHtEeSdr_vplOQQFw" source="PapyrusVersion">
+        <details xmi:id="_aOqbAwHtEeSdr_vplOQQFw" key="Version" value="1.0.1"/>
+        <details xmi:id="_aOqbBAHtEeSdr_vplOQQFw" key="Comment" value=""/>
+        <details xmi:id="_aOqbBQHtEeSdr_vplOQQFw" key="Copyright" value=""/>
+        <details xmi:id="_aOqbBgHtEeSdr_vplOQQFw" key="Date" value="2014-07-02"/>
+        <details xmi:id="_aOqbBwHtEeSdr_vplOQQFw" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_aOn-wQHtEeSdr_vplOQQFw" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aOn-wgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_aOn-wgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_aOn-wwHtEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_aOn-xQHtEeSdr_vplOQQFw" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aOn-xgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_aOn-xgHtEeSdr_vplOQQFw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_aOn-xwHtEeSdr_vplOQQFw" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -218,21 +218,21 @@
       </eClassifiers>
     </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_MjTzMgHKEeS7NbtxzfDUDg" name="profile" nsURI="http:///schemas/profile/_MjTzMAHKEeS7NbtxzfDUDg/0" nsPrefix="profile">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MjTzPwHKEeS7NbtxzfDUDg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MjTzQAHKEeS7NbtxzfDUDg" key="Version" value="1.0.0"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MjTzQQHKEeS7NbtxzfDUDg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MjTzQgHKEeS7NbtxzfDUDg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MjTzQwHKEeS7NbtxzfDUDg" key="Date" value="2014-07-02"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MjTzRAHKEeS7NbtxzfDUDg" key="Author" value=""/>
+      <eAnnotations xmi:id="_MjTzPwHKEeS7NbtxzfDUDg" source="PapyrusVersion">
+        <details xmi:id="_MjTzQAHKEeS7NbtxzfDUDg" key="Version" value="1.0.0"/>
+        <details xmi:id="_MjTzQQHKEeS7NbtxzfDUDg" key="Comment" value=""/>
+        <details xmi:id="_MjTzQgHKEeS7NbtxzfDUDg" key="Copyright" value=""/>
+        <details xmi:id="_MjTzQwHKEeS7NbtxzfDUDg" key="Date" value="2014-07-02"/>
+        <details xmi:id="_MjTzRAHKEeS7NbtxzfDUDg" key="Author" value=""/>
       </eAnnotations>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_MjTzMwHKEeS7NbtxzfDUDg" name="watchSlot">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MjTzNAHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_MjTzNAHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__nEmQAHJEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_MjTzNQHKEeS7NbtxzfDUDg" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xmi:type="ecore:EClass" xmi:id="_MjTzNwHKEeS7NbtxzfDUDg" name="readCSVFile">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MjTzOAHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
+        <eAnnotations xmi:id="_MjTzOAHKEeS7NbtxzfDUDg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AKn_QAHKEeS7NbtxzfDUDg"/>
         <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_MjTzOQHKEeS7NbtxzfDUDg" name="base_Slot" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Slot"/>
         </eStructuralFeatures>
@@ -242,26 +242,26 @@
       </eClassifiers>
     </contents>
   </eAnnotations>
-  <elementImport xmi:type="uml:ElementImport" xmi:id="_DEXMgAHKEeS7NbtxzfDUDg" alias="Slot">
+  <elementImport xmi:id="_DEXMgAHKEeS7NbtxzfDUDg" alias="Slot">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Slot"/>
   </elementImport>
   <packagedElement xmi:type="uml:Stereotype" xmi:id="__nEmQAHJEeS7NbtxzfDUDg" name="watchSlot">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_ES8fgAHKEeS7NbtxzfDUDg" name="base_Slot" association="_ES8fgQHKEeS7NbtxzfDUDg">
+    <ownedAttribute xmi:id="_ES8fgAHKEeS7NbtxzfDUDg" name="base_Slot" association="_ES8fgQHKEeS7NbtxzfDUDg">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Slot"/>
     </ownedAttribute>
-    <icon xmi:type="uml:Image" xmi:id="_QM4-oAHuEeSdr_vplOQQFw" format="" location="../icons/iconplot.png">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QM4-oQHuEeSdr_vplOQQFw" source="image_papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QM4-ogHuEeSdr_vplOQQFw" key="image_name_key" value="Icon"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QM4-owHuEeSdr_vplOQQFw" key="image_kind_key" value="icon"/>
+    <icon xmi:id="_QM4-oAHuEeSdr_vplOQQFw" format="" location="../icons/iconplot.png">
+      <eAnnotations xmi:id="_QM4-oQHuEeSdr_vplOQQFw" source="image_papyrus">
+        <details xmi:id="_QM4-ogHuEeSdr_vplOQQFw" key="image_name_key" value="Icon"/>
+        <details xmi:id="_QM4-owHuEeSdr_vplOQQFw" key="image_kind_key" value="icon"/>
       </eAnnotations>
       <content xsi:nil="true"/>
     </icon>
   </packagedElement>
   <packagedElement xmi:type="uml:Stereotype" xmi:id="_AKn_QAHKEeS7NbtxzfDUDg" name="readCSVFile">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_D0RmgAHKEeS7NbtxzfDUDg" name="base_Slot" association="_D0RmgQHKEeS7NbtxzfDUDg">
+    <ownedAttribute xmi:id="_D0RmgAHKEeS7NbtxzfDUDg" name="base_Slot" association="_D0RmgQHKEeS7NbtxzfDUDg">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Slot"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_E3U-8AHKEeS7NbtxzfDUDg" name="csvSeparator" visibility="public">
+    <ownedAttribute xmi:id="_E3U-8AHKEeS7NbtxzfDUDg" name="csvSeparator" visibility="public">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gcfl8AHKEeS7NbtxzfDUDg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gcfl8QHKEeS7NbtxzfDUDg" value="1"/>
@@ -269,10 +269,10 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <icon xmi:type="uml:Image" xmi:id="_EyRYoAHyEeSdr_vplOQQFw" location="../icons/iconplot.png">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EyRYoQHyEeSdr_vplOQQFw" source="image_papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EyRYogHyEeSdr_vplOQQFw" key="image_name_key" value="Icon"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EyRYowHyEeSdr_vplOQQFw" key="image_kind_key" value="icon"/>
+    <icon xmi:id="_EyRYoAHyEeSdr_vplOQQFw" location="../icons/iconplot.png">
+      <eAnnotations xmi:id="_EyRYoQHyEeSdr_vplOQQFw" source="image_papyrus">
+        <details xmi:id="_EyRYogHyEeSdr_vplOQQFw" key="image_name_key" value="Icon"/>
+        <details xmi:id="_EyRYowHyEeSdr_vplOQQFw" key="image_kind_key" value="icon"/>
       </eAnnotations>
     </icon>
   </packagedElement>

@@ -17,7 +17,7 @@
       </category>
       <view
             name="PlotPluginView"
-            icon="icons/sample.gif"
+            icon="icons/iconplot.png"
             category="de.iils.dc43.plotplugin"
             class="de.iils.dc43.plotplugin.views.PlotPluginView"
             id="de.iils.dc43.plotplugin.views.PlotPluginView">
@@ -81,7 +81,7 @@
             locationURI="menu:de.iils.dc43.application.menus.umlInterfacesMenu?after=evaluate">
          <command
                commandId="de.iils.dc43.plotplugin.commands.evaluate"
-               icon="icons/sample.gif"
+               icon="icons/iconplot.png"
                id="de.iils.dc43.plotplugin.menus.evaluate"
                style="push"
                tooltip="Evaluate UML with the amazing super Plot-Plugin">
@@ -91,7 +91,7 @@
             locationURI="menu:de.iils.dc43.application.toolbar.evaluate">
          <command
                commandId="de.iils.dc43.plotplugin.commands.evaluate"
-               icon="icons/sample.gif"
+               icon="icons/iconplot.png"
                id="de.iils.dc43.plotplugin.toolbars.evaluate"
                label="Plot-Plugin"
                style="push"
@@ -103,7 +103,7 @@
             locationURI="popup:de.iils.dc43.application.menus.evaluateMenu">
          <command
                commandId="de.iils.dc43.plotplugin.commands.evaluate"
-               icon="icons/sample.gif"
+               icon="icons/iconplot.png"
                id="de.iils.dc43.plotplugin.popups.evaluate"
                style="push"
                tooltip="Evaluate UML with Excel">
