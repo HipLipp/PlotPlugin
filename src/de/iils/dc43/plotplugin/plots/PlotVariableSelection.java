@@ -18,6 +18,8 @@ public class PlotVariableSelection {
 
 		this.store = new HashMap<String, Boolean[]>();
 
+		this.store.put("EntryID", new Boolean[] { false, false });
+
 		for (String itemName : itemNames) {
 			// First entity == X - Status
 			// second Entity == Y - Status

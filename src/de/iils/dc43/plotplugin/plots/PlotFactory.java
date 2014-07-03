@@ -41,19 +41,29 @@ public class PlotFactory {
 			PlotVariableSelection varSelection) {
 
 		plot2DPanel.removeAllPlots();
-		Map<String, ArrayList<Double>> datasets = PlotDatabase.getDatabase().getDatasets();
+		Map<String, ArrayList<Double>> datasets = PlotDatabase.getDatabase()
+				.getDatasets();
 
 		// X-Value
 		double[] xValues = null;
 		String xVarName = null;
-		for (Entry<String, Boolean[]> selector : varSelection.getStore().entrySet()) {
+		for (Entry<String, Boolean[]> selector : varSelection.getStore()
+				.entrySet()) {
 			if (selector.getValue()[0]) {
-				xValues = convertDoubleListToDoubleArray(datasets.get(selector.getKey()));
-				xVarName = selector.getKey();
+
+				if (selector.getKey() == "EntryID") {
+					xVarName = selector.getKey();
+
+				} else {
+					xValues = convertDoubleListToDoubleArray(datasets
+							.get(selector.getKey()));
+					xVarName = selector.getKey();
+				}
+
 			}
 		}
 
-		if (xValues == null) {
+		if (xVarName == null) {
 			// logger.info("Could not update plot, missing valid X-Variable name.");
 			return;
 		}
@@ -61,10 +71,23 @@ public class PlotFactory {
 		plot2DPanel.setAxisLabel(1, "");
 
 		// Y-Value
-		for (Entry<String, Boolean[]> selector : varSelection.getStore().entrySet()) {
+		for (Entry<String, Boolean[]> selector : varSelection.getStore()
+				.entrySet()) {
 			if (selector.getValue()[1]) {
-				double[] yValues = convertDoubleListToDoubleArray(datasets.get(selector.getKey()));
-				plot2DPanel.addLinePlot(selector.getKey(), xValues, yValues);
+
+				double[] yValues = convertDoubleListToDoubleArray(datasets
+						.get(selector.getKey()));
+
+				if (xVarName == "EntryID") {
+					xValues = getXEntry(yValues);
+					plot2DPanel
+							.addLinePlot(selector.getKey(), xValues, yValues);
+
+				} else {
+					plot2DPanel
+							.addLinePlot(selector.getKey(), xValues, yValues);
+				}
+
 			}
 		}
 
@@ -90,4 +113,12 @@ public class PlotFactory {
 		return ret;
 	}
 
+	private static double[] getXEntry(double[] yValues) {
+		double[] xValues = new double[yValues.length];
+		for (int i = 0; i < xValues.length; i++) {
+			xValues[i] = i;
+		}
+
+		return xValues;
+	}
 }
