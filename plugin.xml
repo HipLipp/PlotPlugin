@@ -11,14 +11,10 @@
 
    <extension
          point="org.eclipse.ui.views">
-      <category
-            name="Sample Category"
-            id="de.iils.dc43.plotplugin">
-      </category>
       <view
             name="PlotPluginView"
             icon="icons/iconplot.png"
-            category="de.iils.dc43.plotplugin"
+            category="de.iils.dc43.viewCategory"
             class="de.iils.dc43.plotplugin.views.PlotPluginView"
             id="de.iils.dc43.plotplugin.views.PlotPluginView">
       </view>
@@ -26,12 +22,12 @@
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
       <perspectiveExtension
-            targetID="org.eclipse.jdt.ui.JavaPerspective">
+            targetID="de.iils.dc43.application.perspective">
          <view
                ratio="0.5"
-               relative="org.eclipse.ui.views.ProblemView"
+               relative="org.eclipse.ui.views.ContentOutline"
                relationship="right"
-               id="de.iils.dc43.plotplugin.views.SampleView">
+               id="de.iils.dc43.plotplugin.views.PlotPluginView">
          </view>
       </perspectiveExtension>
    </extension>
@@ -73,6 +69,10 @@
             id="de.iils.dc43.plotplugin.commands.evaluate"
             name="Evaluate with PlotPlugin">
       </command>
+      <command
+            id="de.iils.dc43.plotplugin.plotPluginView"
+            name="Plot-Plugin View">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -83,6 +83,7 @@
                commandId="de.iils.dc43.plotplugin.commands.evaluate"
                icon="icons/iconplot.png"
                id="de.iils.dc43.plotplugin.menus.evaluate"
+               label="Plot-Plugin"
                style="push"
                tooltip="Evaluate UML with the amazing super Plot-Plugin">
          </command>
@@ -106,7 +107,7 @@
                icon="icons/iconplot.png"
                id="de.iils.dc43.plotplugin.popups.evaluate"
                style="push"
-               tooltip="Evaluate UML with Excel">
+               tooltip="Evaluate UML with the amazing super Plot-Plugin">
          </command>
       </menuContribution>
    </extension>

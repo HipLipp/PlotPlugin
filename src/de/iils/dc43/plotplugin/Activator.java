@@ -3,11 +3,17 @@ package de.iils.dc43.plotplugin;
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 import de.iils.dc43.logging.LoggingPlugin;
 import de.iils.dc43.logging.PluginLogManager;
+import de.iils.dc43.plotplugin.views.PlotPluginView;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -26,6 +32,10 @@ public class Activator extends AbstractUIPlugin {
 	private static boolean alreadyStarted = false;;
 
 	private static Object mutex = new Object();
+
+	private static PlotPluginView plotPluginView;
+
+	private static IWorkbenchPage workbenchPage;
 
 	/**
 	 * The constructor
@@ -104,6 +114,50 @@ public class Activator extends AbstractUIPlugin {
 			return logger;
 		}
 		return getDefault().logManager.getLogger(c.getName());
+	}
+
+	public static void generateViewsFromEngine() {
+		findWorkbenchPage();
+		Display.getDefault().syncExec(new Runnable() {
+			@Override
+			public void run() {
+				createViews();
+			}
+		});
+	}
+
+	public static void generateViewsFromUI() {
+		findWorkbenchPage();
+		createViews();
+	}
+
+	private static void createViews() {
+
+		try {
+			plotPluginView = (PlotPluginView) workbenchPage.showView(PlotPluginView.ID);
+			workbenchPage.showView(PlotPluginView.ID);
+		} catch (PartInitException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void findWorkbenchPage() {
+		// if no page
+		if (workbenchPage == null) {
+			IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+			// if active
+			if (window != null) {
+				workbenchPage = window.getActivePage();
+				// if Engine
+			} else {
+				IWorkbenchWindow[] wins = PlatformUI.getWorkbench().getWorkbenchWindows();
+				IWorkbenchPage[] pages = null;
+				for (IWorkbenchWindow win : wins) {
+					pages = win.getPages();
+				}
+				workbenchPage = pages[0];
+			}
+		}
 	}
 }
 

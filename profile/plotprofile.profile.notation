@@ -28,7 +28,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nQzggHJEeS7NbtxzfDUDg"/>
     </children>
     <element xmi:type="uml:Stereotype" href="plotprofile.profile.uml#__nEmQAHJEeS7NbtxzfDUDg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nEmQgHJEeS7NbtxzfDUDg" x="258" y="184"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nEmQgHJEeS7NbtxzfDUDg" x="222" y="255"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_AKn_QQHKEeS7NbtxzfDUDg" type="1026" fontName="Segoe UI" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AKn_QwHKEeS7NbtxzfDUDg" source="ShadowFigure">
