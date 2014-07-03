@@ -71,7 +71,8 @@ public class PlotPluginView extends ViewPart {
 	@Override
 	public void createPartControl(Composite parent) {
 
-		Composite composite = new Composite(parent, SWT.EMBEDDED | SWT.NO_BACKGROUND);
+		Composite composite = new Composite(parent, SWT.EMBEDDED
+				| SWT.NO_BACKGROUND);
 		frame = SWT_AWT.new_Frame(composite);
 
 		// Update DB DEBUG
@@ -111,7 +112,8 @@ public class PlotPluginView extends ViewPart {
 		yValueDownMenu = new DropDownAction("Y-Value[s]",
 				PlotDatabase.getVariableSelectionFromDB(), 1);
 
-		IToolBarManager toolBar = getViewSite().getActionBars().getToolBarManager();
+		IToolBarManager toolBar = getViewSite().getActionBars()
+				.getToolBarManager();
 		toolBar.add(xValueDownMenu);
 		toolBar.add(yValueDownMenu);
 
@@ -152,8 +154,8 @@ public class PlotPluginView extends ViewPart {
 	 * 
 	 */
 	class DropDownAction extends Action {
-		public DropDownAction(String name, final PlotVariableSelection menuCollection,
-				final int column) {
+		public DropDownAction(String name,
+				final PlotVariableSelection menuCollection, final int column) {
 			super(name, Action.AS_DROP_DOWN_MENU);
 
 			setMenuCreator(new IMenuCreator() {
@@ -161,8 +163,14 @@ public class PlotPluginView extends ViewPart {
 				public Menu getMenu(Control parent) {
 					Menu menu = new Menu(parent);
 
-					for (final Entry<String, Boolean[]> entry : menuCollection.getStore()
-							.entrySet()) {
+					for (final Entry<String, Boolean[]> entry : menuCollection
+							.getStore().entrySet()) {
+
+						// Hide entry EntryID for y-Menu
+						if (column == 1 && entry.getKey() == "EntryID") {
+							continue;
+						}
+
 						final MenuItem item = new MenuItem(menu, SWT.CHECK);
 						item.setText(entry.getKey());
 						item.setSelection(entry.getValue()[column]);
