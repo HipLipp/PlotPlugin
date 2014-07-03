@@ -24,7 +24,21 @@ public class PlotVariableSelection {
 			Boolean[] xyValue = new Boolean[] { false, false };
 			this.store.put(itemName, xyValue);
 		}
+	}
 
+	/**
+	 * Updates the VariableSelection names.
+	 * 
+	 * @param itemNames
+	 */
+	public void updatePlotVariableSelection(ArrayList<String> itemNames) {
+		store.clear();
+		for (String itemName : itemNames) {
+			// First entity == X - Status
+			// second Entity == Y - Status
+			Boolean[] xyValue = new Boolean[] { false, false };
+			this.store.put(itemName, xyValue);
+		}
 	}
 
 	/**

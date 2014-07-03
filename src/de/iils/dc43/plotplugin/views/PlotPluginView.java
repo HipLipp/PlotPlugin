@@ -48,8 +48,6 @@ public class PlotPluginView extends ViewPart {
 	private DropDownAction xValueDownMenu;
 	private DropDownAction yValueDownMenu;
 
-	private PlotVariableSelection menuCollection;
-
 	private Plot2DPanel active2DPlot;
 
 	/*
@@ -108,14 +106,27 @@ public class PlotPluginView extends ViewPart {
 	 */
 	private void createToolBar() {
 
-		menuCollection = new PlotVariableSelection(PlotDatabase.getDatabase().getAllDBKeys());
-
-		xValueDownMenu = new DropDownAction("X-Value", menuCollection, 0);
-		yValueDownMenu = new DropDownAction("Y-Value[s]", menuCollection, 1);
+		// Drop Down Menus
+		xValueDownMenu = new DropDownAction("X-Value", PlotDatabase.getVariableSelectionFromDB(), 0);
+		yValueDownMenu = new DropDownAction("Y-Value[s]",
+				PlotDatabase.getVariableSelectionFromDB(), 1);
 
 		IToolBarManager toolBar = getViewSite().getActionBars().getToolBarManager();
 		toolBar.add(xValueDownMenu);
 		toolBar.add(yValueDownMenu);
+
+		// Clear Button
+		Action clearAction = new Action() {
+			@Override
+			public void run() {
+				PlotDatabase.getDatabase().resetDB();
+				PlotFactory.updatePlot2DFromDB(active2DPlot);
+			}
+		};
+		clearAction.setText("ClearDB");
+		// clearAction.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages()
+		// .getImageDescriptor(SharedImages.IMG_ETOOL_SAVE_EDIT));
+		toolBar.add(clearAction);
 
 	}
 
@@ -130,7 +141,7 @@ public class PlotPluginView extends ViewPart {
 	@Override
 	public void setFocus() {
 		if (active2DPlot != null) {
-			PlotFactory.updatePlot2DFromDB(active2DPlot, menuCollection);
+			PlotFactory.updatePlot2DFromDB(active2DPlot);
 		}
 	}
 
@@ -162,7 +173,7 @@ public class PlotPluginView extends ViewPart {
 								menuCollection.showValue(entry.getKey(), column);
 
 								// Update plot when there was a selection
-								PlotFactory.updatePlot2DFromDB(active2DPlot, menuCollection);
+								PlotFactory.updatePlot2DFromDB(active2DPlot);
 							}
 
 							@Override

@@ -37,9 +37,10 @@ public class PlotFactory {
 	 * @param plot2DPanel
 	 * @param varSelection
 	 */
-	public static void updatePlot2DFromDB(Plot2DPanel plot2DPanel,
-			PlotVariableSelection varSelection) {
+	public static void updatePlot2DFromDB(Plot2DPanel plot2DPanel) {
 
+		PlotVariableSelection varSelection = PlotDatabase.getDatabase()
+				.getVariableSelectionFromDB();
 		plot2DPanel.removeAllPlots();
 		Map<String, ArrayList<Double>> datasets = PlotDatabase.getDatabase().getDatasets();
 

@@ -16,6 +16,7 @@ public class PlotDatabase {
 			.getLogger(PlotDatabase.class);
 	public Map<String, ArrayList<Double>> plotDatasets = new HashMap<String, ArrayList<Double>>();
 	private static PlotDatabase plotDatabase;
+	private static PlotVariableSelection plotVariableSelection;
 
 	// ------------- E N D ------------- //
 
@@ -25,11 +26,29 @@ public class PlotDatabase {
 	private PlotDatabase() {
 	}
 
+	/**
+	 * Get Singleton.
+	 * 
+	 * @return
+	 */
 	public static PlotDatabase getDatabase() {
 		if (plotDatabase == null) {
 			plotDatabase = new PlotDatabase();
 		}
 		return plotDatabase;
+	}
+
+	/**
+	 * Menu with correct vars.
+	 * 
+	 * @return
+	 */
+	public static PlotVariableSelection getVariableSelectionFromDB() {
+		if (plotVariableSelection == null) {
+			plotVariableSelection = new PlotVariableSelection(getDatabase().getAllDBKeys());
+		}
+		plotVariableSelection.updatePlotVariableSelection(getDatabase().getAllDBKeys());
+		return plotVariableSelection;
 	}
 
 	/**
