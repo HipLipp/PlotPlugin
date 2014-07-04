@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 
 import de.iils.dc43.transformationengine.popup.actions.TransformationRunner;
 
@@ -16,7 +17,7 @@ public class PlotDatabase {
 			.getLogger(PlotDatabase.class);
 	private static PlotDatabase plotDatabase;
 	private Map<String, ArrayList<Double>> plotDatasets = new HashMap<String, ArrayList<Double>>();
-	private Map<String, Boolean[]> variableSelection = new HashMap<String, Boolean[]>();
+	private Map<String, Boolean[]> variableSelection = new TreeMap<String, Boolean[]>();
 
 	// ------------- E N D ------------- //
 
