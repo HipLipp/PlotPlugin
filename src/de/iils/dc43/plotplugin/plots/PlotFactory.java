@@ -39,25 +39,22 @@ public class PlotFactory {
 	 */
 	public static void updatePlot2DFromDB(Plot2DPanel plot2DPanel) {
 
-		PlotVariableSelection varSelection = PlotDatabase.getDatabase()
+		Map<String, Boolean[]> varSelection = PlotDatabase.getDatabase()
 				.getVariableSelectionFromDB();
 		plot2DPanel.removeAllPlots();
-		Map<String, ArrayList<Double>> datasets = PlotDatabase.getDatabase()
-				.getDatasets();
+		Map<String, ArrayList<Double>> datasets = PlotDatabase.getDatabase().getDatasets();
 
 		// X-Value
 		double[] xValues = null;
 		String xVarName = null;
-		for (Entry<String, Boolean[]> selector : varSelection.getStore()
-				.entrySet()) {
+		for (Entry<String, Boolean[]> selector : varSelection.entrySet()) {
 			if (selector.getValue()[0]) {
 
 				if (selector.getKey() == "EntryID") {
 					xVarName = selector.getKey();
 
 				} else {
-					xValues = convertDoubleListToDoubleArray(datasets
-							.get(selector.getKey()));
+					xValues = convertDoubleListToDoubleArray(datasets.get(selector.getKey()));
 					xVarName = selector.getKey();
 				}
 
@@ -65,28 +62,23 @@ public class PlotFactory {
 		}
 
 		if (xVarName == null) {
-			// logger.info("Could not update plot, missing valid X-Variable name.");
 			return;
 		}
 		plot2DPanel.setAxisLabel(0, xVarName); // X-Label
 		plot2DPanel.setAxisLabel(1, "");
 
 		// Y-Value
-		for (Entry<String, Boolean[]> selector : varSelection.getStore()
-				.entrySet()) {
+		for (Entry<String, Boolean[]> selector : varSelection.entrySet()) {
 			if (selector.getValue()[1]) {
 
-				double[] yValues = convertDoubleListToDoubleArray(datasets
-						.get(selector.getKey()));
+				double[] yValues = convertDoubleListToDoubleArray(datasets.get(selector.getKey()));
 
 				if (xVarName == "EntryID") {
 					xValues = getXEntry(yValues);
-					plot2DPanel
-							.addLinePlot(selector.getKey(), xValues, yValues);
+					plot2DPanel.addLinePlot(selector.getKey(), xValues, yValues);
 
 				} else {
-					plot2DPanel
-							.addLinePlot(selector.getKey(), xValues, yValues);
+					plot2DPanel.addLinePlot(selector.getKey(), xValues, yValues);
 				}
 
 			}

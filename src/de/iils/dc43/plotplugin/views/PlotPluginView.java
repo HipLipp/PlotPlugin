@@ -1,6 +1,7 @@
 package de.iils.dc43.plotplugin.views;
 
 import java.awt.Frame;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import org.eclipse.jface.action.Action;
@@ -19,7 +20,6 @@ import org.math.plot.Plot2DPanel;
 
 import de.iils.dc43.plotplugin.plots.PlotDatabase;
 import de.iils.dc43.plotplugin.plots.PlotFactory;
-import de.iils.dc43.plotplugin.plots.PlotVariableSelection;
 
 /**
  * This sample class demonstrates how to plug-in a new workbench view. The view
@@ -71,8 +71,7 @@ public class PlotPluginView extends ViewPart {
 	@Override
 	public void createPartControl(Composite parent) {
 
-		Composite composite = new Composite(parent, SWT.EMBEDDED
-				| SWT.NO_BACKGROUND);
+		Composite composite = new Composite(parent, SWT.EMBEDDED | SWT.NO_BACKGROUND);
 		frame = SWT_AWT.new_Frame(composite);
 
 		// Update DB DEBUG
@@ -108,12 +107,12 @@ public class PlotPluginView extends ViewPart {
 	private void createToolBar() {
 
 		// Drop Down Menus
-		xValueDownMenu = new DropDownAction("X-Value", PlotDatabase.getVariableSelectionFromDB(), 0);
-		yValueDownMenu = new DropDownAction("Y-Value[s]",
-				PlotDatabase.getVariableSelectionFromDB(), 1);
+		xValueDownMenu = new DropDownAction("X-Value", PlotDatabase.getDatabase()
+				.getVariableSelectionFromDB(), 0);
+		yValueDownMenu = new DropDownAction("Y-Value[s]", PlotDatabase.getDatabase()
+				.getVariableSelectionFromDB(), 1);
 
-		IToolBarManager toolBar = getViewSite().getActionBars()
-				.getToolBarManager();
+		IToolBarManager toolBar = getViewSite().getActionBars().getToolBarManager();
 		toolBar.add(xValueDownMenu);
 		toolBar.add(yValueDownMenu);
 
@@ -150,12 +149,10 @@ public class PlotPluginView extends ViewPart {
 	/**
 	 * Class for the dropdown menu. I do not recommend copying from this one.
 	 * 
-	 * @author phoenix
-	 * 
 	 */
 	class DropDownAction extends Action {
-		public DropDownAction(String name,
-				final PlotVariableSelection menuCollection, final int column) {
+		public DropDownAction(String name, final Map<String, Boolean[]> menuCollection,
+				final int column) {
 			super(name, Action.AS_DROP_DOWN_MENU);
 
 			setMenuCreator(new IMenuCreator() {
@@ -163,8 +160,7 @@ public class PlotPluginView extends ViewPart {
 				public Menu getMenu(Control parent) {
 					Menu menu = new Menu(parent);
 
-					for (final Entry<String, Boolean[]> entry : menuCollection
-							.getStore().entrySet()) {
+					for (final Entry<String, Boolean[]> entry : menuCollection.entrySet()) {
 
 						// Hide entry EntryID for y-Menu
 						if (column == 1 && entry.getKey() == "EntryID") {
@@ -178,7 +174,7 @@ public class PlotPluginView extends ViewPart {
 
 							@Override
 							public void widgetSelected(SelectionEvent e) {
-								menuCollection.showValue(entry.getKey(), column);
+								PlotDatabase.getDatabase().showValue(entry.getKey(), column);
 
 								// Update plot when there was a selection
 								PlotFactory.updatePlot2DFromDB(active2DPlot);

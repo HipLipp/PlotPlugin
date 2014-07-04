@@ -14,9 +14,9 @@ public class PlotDatabase {
 	// ------- V A R I A B L E S ------- //
 	private static org.apache.log4j.Logger logger = TransformationRunner
 			.getLogger(PlotDatabase.class);
-	public Map<String, ArrayList<Double>> plotDatasets = new HashMap<String, ArrayList<Double>>();
 	private static PlotDatabase plotDatabase;
-	private static PlotVariableSelection plotVariableSelection;
+	private Map<String, ArrayList<Double>> plotDatasets = new HashMap<String, ArrayList<Double>>();
+	private Map<String, Boolean[]> variableSelection = new HashMap<String, Boolean[]>();
 
 	// ------------- E N D ------------- //
 
@@ -43,12 +43,11 @@ public class PlotDatabase {
 	 * 
 	 * @return
 	 */
-	public static PlotVariableSelection getVariableSelectionFromDB() {
-		if (plotVariableSelection == null) {
-			plotVariableSelection = new PlotVariableSelection(getDatabase().getAllDBKeys());
+	public Map<String, Boolean[]> getVariableSelectionFromDB() {
+		if (!variableSelection.containsKey("EntryID")) {
+			variableSelection.put("EntryID", new Boolean[] { false, false });
 		}
-		plotVariableSelection.updatePlotVariableSelection(getDatabase().getAllDBKeys());
-		return plotVariableSelection;
+		return variableSelection;
 	}
 
 	/**
@@ -67,6 +66,7 @@ public class PlotDatabase {
 		}
 
 		plotDatasets.put(datasetName, values);
+		variableSelection.put(datasetName, new Boolean[] { false, false });
 
 		return true;
 	}
@@ -84,8 +84,10 @@ public class PlotDatabase {
 
 		if (plotDatasets.containsKey(datasetName) && overwriteOldData) {
 			plotDatasets.put(datasetName, values);
+			variableSelection.put(datasetName, new Boolean[] { false, false });
 		} else if (!plotDatasets.containsKey(datasetName)) {
 			plotDatasets.put(datasetName, values);
+			variableSelection.put(datasetName, new Boolean[] { false, false });
 		}
 
 	}
@@ -99,7 +101,7 @@ public class PlotDatabase {
 	 * 
 	 * @return
 	 */
-	public ArrayList<String> getAllDBKeys() {
+	public ArrayList<String> getAllDBVariableNames() {
 
 		ArrayList<String> allKeys = new ArrayList<String>();
 		for (Entry<String, ArrayList<Double>> dataset : plotDatasets.entrySet()) {
@@ -111,7 +113,7 @@ public class PlotDatabase {
 	}
 
 	/**
-	 * Get ArrayList<Double> for wanted variableName out of the DB
+	 * Get ArrayList<Double> for variableName out of the DB
 	 * 
 	 * @param variableName
 	 * @return ArrayList<Double> or null, if DB to not contains Variable
@@ -175,9 +177,13 @@ public class PlotDatabase {
 	public void addSlotValueToDB(String variableName, double value, boolean eraseOldData) {
 
 		ArrayList<Double> dataset = null;
-		if (!plotDatabase.plotDatasets.containsKey(variableName) || eraseOldData) {
+		if (!plotDatabase.getDatasets().containsKey(variableName)) {
 			dataset = new ArrayList<Double>();
-			plotDatabase.plotDatasets.put(variableName, dataset);
+			plotDatabase.getDatasets().put(variableName, dataset);
+			variableSelection.put(variableName, new Boolean[] { false, false });
+		} else if (plotDatabase.getDatasets().containsKey(variableName) && eraseOldData) {
+			dataset = new ArrayList<Double>();
+			plotDatabase.getDatasets().put(variableName, dataset);
 		} else {
 			dataset = plotDatabase.plotDatasets.get(variableName);
 		}
@@ -190,13 +196,91 @@ public class PlotDatabase {
 	 */
 	public void resetDB() {
 		plotDatabase.plotDatasets.clear();
+		variableSelection.clear();
+		variableSelection.put("EntryID", new Boolean[] { false, false });
+	}
+
+	// //////////////////// S E L E C T I O N S T U F F ////////////////////////
+	/**
+	 * Show the variable keyName as either x==0 or y==1.
+	 * 
+	 * @param keyName
+	 * @param column
+	 */
+	public void showValue(String keyName, int column) {
+		if (column == 0) {
+			showAsXValue(keyName);
+		} else if (column == 1) {
+			showAsYValue(keyName);
+		} else {
+			System.out.println("Error Column is not available");
+
+		}
+
 	}
 
 	/**
-	 * @return the plotDatasets
+	 * Use the variable: keyName as X-Value.
+	 * 
+	 * @param keyName
 	 */
-	public Map<String, ArrayList<Double>> getPlotDatasets() {
-		return plotDatasets;
+	private void showAsXValue(String keyName) {
+
+		if (!variableSelection.containsKey(keyName))
+			return;
+
+		for (Entry<String, Boolean[]> entry : variableSelection.entrySet()) {
+			// String key = entry.getKey();
+			Boolean[] value = entry.getValue();
+			value[0] = false;
+		}
+		Boolean[] value = variableSelection.get(keyName);
+		value[0] = true;
+		this.variableSelection.put(keyName, value);
+	}
+
+	/**
+	 * Use the variable: keyName as X-Value.
+	 * 
+	 * @param keyName
+	 */
+	private void showAsYValue(String keyName) {
+
+		if (!variableSelection.containsKey(keyName))
+			return;
+
+		Boolean[] value = variableSelection.get(keyName);
+		value[1] = !value[1];
+		this.variableSelection.put(keyName, value);
+	}
+
+	/**
+	 * Get the xVariable Name.
+	 * 
+	 * @return
+	 */
+	public String getXVariableName() {
+		for (Entry<String, Boolean[]> entry : variableSelection.entrySet()) {
+			if (entry.getValue()[0]) {
+				return entry.getKey();
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Get the xVariable Names as ArrayList.
+	 * 
+	 * @return names
+	 */
+	public ArrayList<String> getYVariableNames() {
+		ArrayList<String> names = new ArrayList<>();
+		for (Entry<String, Boolean[]> entry : variableSelection.entrySet()) {
+			if (entry.getValue()[0]) {
+				names.add(entry.getKey());
+			}
+		}
+		return names;
 	}
 
 }

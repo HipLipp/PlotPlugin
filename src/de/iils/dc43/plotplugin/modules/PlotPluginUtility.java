@@ -35,16 +35,13 @@ public class PlotPluginUtility extends UMLUtility {
 					String name = slot.getDefiningFeature().getName();
 
 					try {// Try to get double Value and add to DB
-						Double doubleFromSlot = getDoubleFromSlot(instance,
-								name);
+						Double doubleFromSlot = getDoubleFromSlot(instance, name);
 						PlotDatabase.getDatabase().addSlotValueToDB(
-								instance.getName() + "_" + name,
-								doubleFromSlot, false);
+								instance.getName() + "_" + name, doubleFromSlot, false);
 
 					} catch (Exception e) {
 						Logger.getLogger().info(
-								"Slot " + name + " of Instance "
-										+ instance.getName()
+								"Slot " + name + " of Instance " + instance.getName()
 										+ " is not a double");
 
 					}
@@ -77,13 +74,11 @@ public class PlotPluginUtility extends UMLUtility {
 					String name = slot.getDefiningFeature().getName();
 
 					try {
-						String slotStringValueByString = getSlotStringValueByString(
-								instance, name);
+						String slotStringValueByString = getSlotStringValueByString(instance, name);
 
 						// if (slotStringValueByString.contains(".csv")) {
-						PlotDatabase.getDatabase().updateFromFile(
-								slotStringValueByString, " ");// TODO
-																// Seperator
+						PlotDatabase.getDatabase().updateFromFile(slotStringValueByString, " ");// TODO
+																								// Seperator
 
 						// } else {
 						// Logger.getLogger().info(
@@ -107,10 +102,8 @@ public class PlotPluginUtility extends UMLUtility {
 	 * name in the DB, it will create a new series.
 	 */
 
-	public static void addValueToDB(String variableName, double value,
-			boolean eraseOldData) {
-		PlotDatabase.getDatabase().addSlotValueToDB(variableName, value,
-				eraseOldData);
+	public static void addValueToDB(String variableName, double value, boolean eraseOldData) {
+		PlotDatabase.getDatabase().addSlotValueToDB(variableName, value, eraseOldData);
 	}
 
 	/**
@@ -170,7 +163,7 @@ public class PlotPluginUtility extends UMLUtility {
 	 * Reset DB. Removes all data.
 	 */
 	public static void resetDB() {
-		PlotDatabase.getDatabase().plotDatasets.clear();
+		PlotDatabase.getDatabase().getDatasets().clear();
 	}
 
 }
